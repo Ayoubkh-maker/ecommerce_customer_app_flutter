@@ -1,0 +1,25 @@
+import 'package:app_ecommerce/core/constant/app_colors.dart';
+import 'package:flutter/material.dart';
+
+class Customvalidbuttons extends StatelessWidget {
+  final String titlebtn;
+  final  void Function() onPressed;
+  const Customvalidbuttons({super.key, required this.titlebtn, required this.onPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialButton(
+      onPressed: onPressed,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+      color: AppColor.blueA,
+      textColor: Colors.white,
+      minWidth: 300,
+      height: 40,
+      child:  Text(
+        titlebtn,
+        style:const TextStyle(
+            fontFamily: "Cairo", fontWeight: FontWeight.bold, fontSize: 15),
+      ),
+    );
+  }
+}
